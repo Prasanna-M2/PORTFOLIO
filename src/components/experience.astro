@@ -1,0 +1,157 @@
+---
+const internships = [
+  {
+    role: "Control Panel Manufacturing & Testing Intern",
+    company: "SCG Ex d Tech Pvt. Ltd.",
+    period: "June–July 2026",
+    points: [
+      "Observed panel assembly, wiring, enclosure fabrication, testing, and dispatch.",
+    ],
+  },
+  {
+    role: "Electrical Intern",
+    company: "NLC India Limited",
+    period: "May–June 2025",
+    points: [
+      "Studied industrial electrical systems, maintenance routines, and safety procedures.",
+      "Documented technical observations and learnings.",
+    ],
+  },
+];
+
+const education = [
+  {
+    degree: "B.E. Electrical and Electronics Engineering",
+    institution: "K.S. Rangasamy College of Technology, Tiruchengode",
+    period: "2024–2028",
+    score: "CGPA: 8.28/10 (after Semester 4)",
+  },
+  {
+    degree: "Class XII – State Board",
+    institution:
+      "Sri Vijay Vidyalaya Matriculation Higher Secondary School, Adiyur, Tirupattur",
+    period: "2023–2024",
+    score: "78.3%",
+  },
+  {
+    degree: "Class X – State Board",
+    institution:
+      "Sri Vijay Vidyalaya Matriculation Higher Secondary School, Adiyur, Tirupattur",
+    period: "2021–2022",
+    score: "76.2%",
+  },
+];
+
+const certifications = [
+  "NPTEL – Introduction to Internet of Things (73.0%)",
+  "NPTEL – Introduction to Industry 4.0 and Industrial IoT (64.0%)",
+  "PLC Programming Training – Ladder logic and Siemens PLC",
+  "Embedded Systems Course – Microcontrollers, firmware, and IoT",
+];
+
+const achievements = [
+  "Earned selection for the Rajyapuraskar Award for leadership, discipline, and service.",
+  "Led a team to Round 2 of Smart India Hackathon; contributed to Round 2 of MSME Hackathon.",
+  "Participated in AICTE IDE Bootcamp (Madurai).",
+];
+---
+
+<section
+  id="experience"
+  class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
+>
+  <div class="max-w-5xl mx-auto space-y-12">
+    <div>
+      <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Background</h2>
+      <h3 class="text-4xl md:text-5xl font-medium mb-8">
+        Internships &amp; Education
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <h4 class="text-xl font-semibold text-[var(--white)]">Internships</h4>
+          {
+            internships.map((item) => (
+              <div class="bg-[#1414149c] border border-[var(--white-icon-tr)] rounded-2xl p-5 space-y-2">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h5 class="text-lg font-semibold text-[var(--white)]">
+                    {item.role}
+                  </h5>
+                  <span class="text-xs text-[var(--sec)] font-medium">
+                    {item.period}
+                  </span>
+                </div>
+                <p class="text-sm text-[var(--white)] opacity-85">
+                  {item.company}
+                </p>
+                <ul class="space-y-1.5 text-sm text-[var(--white-icon)] pt-1">
+                  {item.points.map((pt) => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-[var(--sec)]">•</span>
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-xl font-semibold text-[var(--white)]">Education</h4>
+          {
+            education.map((edu) => (
+              <div class="bg-[#1414149c] border border-[var(--white-icon-tr)] rounded-2xl p-5 space-y-1.5">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h5 class="text-lg font-semibold text-[var(--white)]">
+                    {edu.degree}
+                  </h5>
+                  <span class="text-xs text-[var(--sec)] font-medium">
+                    {edu.period}
+                  </span>
+                </div>
+                <p class="text-sm text-[var(--white-icon)]">
+                  {edu.institution}
+                </p>
+                <p class="text-sm text-[var(--white)] font-medium pt-0.5">
+                  {edu.score}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-[#1414149c] border border-[var(--white-icon-tr)] rounded-2xl p-6 space-y-4">
+        <h4 class="text-xl font-semibold text-[var(--white)]">Certifications</h4>
+        <ul class="space-y-2.5 text-sm text-[var(--white-icon)]">
+          {
+            certifications.map((cert) => (
+              <li class="flex items-start gap-2.5">
+                <span class="text-[var(--sec)] mt-0.5">•</span>
+                <span>{cert}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="bg-[#1414149c] border border-[var(--white-icon-tr)] rounded-2xl p-6 space-y-4">
+        <h4 class="text-xl font-semibold text-[var(--white)]">Achievements</h4>
+        <ul class="space-y-2.5 text-sm text-[var(--white-icon)]">
+          {
+            achievements.map((ach) => (
+              <li class="flex items-start gap-2.5">
+                <span class="text-[var(--sec)] mt-0.5">•</span>
+                <span>{ach}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#13111c" />
+      <stop offset="100%" stop-color="#0c0d12" />
+    </linearGradient>
+    <pattern id="grid2" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff08" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg2)" />
+  <rect width="800" height="500" fill="url(#grid2)" />
+
+  <circle cx="410" cy="250" r="195" fill="#a476ff" opacity="0.08" />
+
+  <!-- 12V DC Rig Header -->
+  <rect x="40" y="36" width="290" height="34" rx="17" fill="#ffffff08" stroke="#ffffff18" />
+  <circle cx="62" cy="53" r="5" fill="#a476ff" />
+  <text x="76" y="58" fill="#dfdfdf" font-family="sans-serif" font-size="13" font-weight="600">12V DC TEST RIG · EV HEALTH</text>
+
+  <!-- Sensors Column -->
+  <rect x="85" y="135" width="165" height="68" rx="10" fill="#181822" stroke="#a476ff66" stroke-width="1.5" />
+  <text x="167" y="166" fill="#a476ff" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">2x INA219</text>
+  <text x="167" y="186" fill="#a0a0b5" font-family="monospace" font-size="11" text-anchor="middle">Current &amp; Voltage</text>
+
+  <rect x="85" y="225" width="165" height="68" rx="10" fill="#181822" stroke="#f59e0b66" stroke-width="1.5" />
+  <text x="167" y="256" fill="#fbbf24" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">DS18B20</text>
+  <text x="167" y="276" fill="#a0a0b5" font-family="monospace" font-size="11" text-anchor="middle">Thermal Sensing</text>
+
+  <rect x="85" y="315" width="165" height="68" rx="10" fill="#181822" stroke="#6ee7b766" stroke-width="1.5" />
+  <text x="167" y="346" fill="#6ee7b7" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">12V DC Rig</text>
+  <text x="167" y="366" fill="#a0a0b5" font-family="monospace" font-size="11" text-anchor="middle">Load &amp; Fault Sim</text>
+
+  <!-- Connectors -->
+  <path d="M 250 169 H 315 V 250 H 345" fill="none" stroke="#a476ff" stroke-width="2" />
+  <path d="M 250 259 H 345" fill="none" stroke="#fbbf24" stroke-width="2" />
+  <path d="M 250 349 H 315 V 268 H 345" fill="none" stroke="#6ee7b7" stroke-width="2" />
+
+  <!-- ESP32 Core -->
+  <rect x="345" y="190" width="145" height="140" rx="14" fill="#1b1929" stroke="#a476ff" stroke-width="2" />
+  <text x="417" y="248" fill="#dfdfdf" font-family="monospace" font-size="17" font-weight="bold" text-anchor="middle">ESP32</text>
+  <text x="417" y="272" fill="#a476ff" font-family="monospace" font-size="12" text-anchor="middle">Telemetry &amp;</text>
+  <text x="417" y="290" fill="#a476ff" font-family="monospace" font-size="12" text-anchor="middle">Diagnostics</text>
+
+  <!-- Output Arrows -->
+  <path d="M 490 230 H 545" fill="none" stroke="#a476ff" stroke-width="2" />
+  <path d="M 490 290 H 545" fill="none" stroke="#6ee7b7" stroke-width="2" />
+
+  <!-- Wi-Fi Dashboard -->
+  <rect x="545" y="145" width="180" height="115" rx="12" fill="#181822" stroke="#ffffff25" stroke-width="1.5" />
+  <text x="635" y="176" fill="#dfdfdf" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">Wi-Fi Dashboard</text>
+  <!-- Mini waveform -->
+  <polyline points="565,232 590,224 610,235 635,205 660,218 685,198 705,206" fill="none" stroke="#a476ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- OLED Output -->
+  <rect x="545" y="278" width="180" height="90" rx="12" fill="#181822" stroke="#6ee7b755" stroke-width="1.5" />
+  <text x="635" y="314" fill="#6ee7b7" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">OLED Display</text>
+  <text x="635" y="338" fill="#a0a0b5" font-family="monospace" font-size="11" text-anchor="middle">Health: OK · 34.2°C</text>
+</svg>
+

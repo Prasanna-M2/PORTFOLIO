@@ -1,0 +1,113 @@
+<section id="contact" class="w-full py-12 border-t border-[#ffffff10]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Let's talk</h2>
+    <h3 class="text-4xl md:text-5xl font-medium text-[var(--white)] mb-6">
+      Contact
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="text-[var(--white-icon)] space-y-4">
+        <p>
+          Looking for entry-level opportunities in Embedded Systems, Firmware,
+          or IoT? Feel free to reach out.
+        </p>
+        <div class="space-y-2.5 text-sm md:text-base">
+          <div class="flex items-center gap-2">
+            <span>Location:</span>
+            <span class="text-[var(--white)]">Tamil Nadu, India</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span>Email:</span>
+            <a
+              href="mailto:prasanna0875@gmail.com"
+              class="text-[var(--white)] hover:text-[var(--sec)] transition-colors"
+            >
+              prasanna0875@gmail.com
+            </a>
+          </div>
+          <div class="flex items-center gap-2">
+            <span>Phone:</span>
+            <a
+              href="tel:+919080154241"
+              class="text-[var(--white)] hover:text-[var(--sec)] transition-colors"
+            >
+              +91 90801 54241
+            </a>
+          </div>
+          <div class="flex items-center gap-2">
+            <span>LinkedIn:</span>
+            <a
+              href="https://www.linkedin.com/in/prasanna-m-2a4344391"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[var(--white)] hover:text-[var(--sec)] transition-colors"
+            >
+              linkedin.com/in/prasanna-m-2a4344391
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <form
+          id="contact-form"
+          class="flex flex-col gap-4"
+        >
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Name"
+            required
+            class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)]"
+          />
+          <input
+            type="email"
+            name="reply_to"
+            placeholder="Email"
+            required
+            class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)]"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="6"
+            required
+            class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)] resize-none"
+          ></textarea>
+          <button
+            type="submit"
+            class="px-4 py-2 bg-[var(--white-icon-tr)] text-[var(--white)] rounded-lg opacity-80 transition-opacity border border-[var(--white-icon-tr)] hover:opacity-100 hover:bg-[var(--white-icon-tr)]"
+          >
+            Send Email
+          </button>
+        </form>
+        <div
+          id="form-message"
+          class="hidden justify-center items-center mt-4 text-[var(--white)] text-base"
+        >
+          Opening your email client to message Prasanna M...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module" is:inline>
+  const form = document.getElementById("contact-form");
+  const formMessage = document.getElementById("form-message");
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const name = String(formData.get("from_name") || "").trim();
+    const email = String(formData.get("reply_to") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    );
+    window.location.href = `mailto:prasanna0875@gmail.com?subject=${subject}&body=${body}`;
+    form.reset();
+    formMessage?.classList.remove("hidden");
+  });
+</script>

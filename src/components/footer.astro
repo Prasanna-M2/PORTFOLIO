@@ -1,5 +1,6 @@
 ---
 import LikeButton from "../React/LikeButton.tsx";
+import AudioPlayer from "../React/AudioPlayer.tsx";
 
 const currentYear = new Date().getFullYear();
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -92,18 +93,12 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
       </div>
 
       <div class="flex flex-col items-center lg:items-start space-y-4">
-        <div class="w-full max-w-xs bg-[#1414149c] border border-[var(--white-icon-tr)] rounded-2xl p-5 space-y-2">
-          <p class="text-sm font-semibold text-[var(--white)]">Prasanna M</p>
-          <p class="text-xs text-[var(--white-icon)]">
-            B.E. Electrical &amp; Electronics Engineering
-          </p>
-          <p class="text-xs text-[var(--white-icon)]">
-            K.S. Rangasamy College of Technology
-          </p>
-          <p class="text-xs text-[var(--sec)] pt-1">
-            Tamil Nadu, India · +91 90801 54241
-          </p>
-        </div>
+        <AudioPlayer
+          client:load
+          src={`${baseUrl}/audio/lets-celebrate-together.mp3`}
+          title="Let's Celebrate Together"
+          subtitle="Dude (Movie)"
+        />
       </div>
     </div>
 

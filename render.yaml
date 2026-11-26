@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: prasanna-portfolio
+    runtime: static
+    buildCommand: pnpm install --frozen-lockfile && pnpm run build
+    staticPublishPath: dist
+    envVars:
+      - key: ASTRO_TELEMETRY_DISABLED
+        value: "1"
+
